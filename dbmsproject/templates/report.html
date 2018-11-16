@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+    <title>Report Page</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+</head>
+<body>
+        <a class="btn btn-danger btn-lg btn-block" href="#"><h1>Here are your reports</h1></a>
+    {% if studentlist %}
+    <div class="d   ivclass" style="background-color:yellow;">
+        <table align="center">
+            <thead>
+                <th>Student Name</th>
+                <th>Date of Birth</th>
+                <th>Register Number</th>
+                <th>Course</th>
+                <th>Branch</th>
+            </thead>
+        {% for record in studentlist %}
+        <tr>
+            <td>{{record.sname}}</td>
+            <td>{{record.dob}}</td>
+            <td>{{record.sregno}}</td>
+            <td>{{record.course}}</td>
+            <td>{{ record.branch }}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </div>
+    {% endif %}
+    <br>
+    <a class="btn btn-warning btn-lg btn-block" href="/">Go to home page</a>
+</body>
+</html>

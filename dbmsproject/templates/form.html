@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Page</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+</head>
+<body>
+    <a class="btn btn-danger btn-lg btn-block" href="#"><h1>Here is the form. Fill this out!</h1></a>
+    <div class="jumbotron" >
+        {% for field in form%}
+            {% if field.errors %}
+                <h1>Errors found</h1>
+            {% endif %}
+            <label for="{{field.id}}">{{field.label}}</label>
+            <div id="{{field.id}}" class="container">{{field}}</div>
+        {% endfor %}
+    </div>
+    <br>
+    <a class="btn btn-warning btn-lg btn-block" href="/"><h1></h1>Go to home page</a>
+</body>
+</html>

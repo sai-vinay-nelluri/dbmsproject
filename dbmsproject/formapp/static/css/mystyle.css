@@ -1,0 +1,15 @@
+h1{
+    color:red;
+    text-align: center;
+}
+body{
+    background-color:yellow;
+}
+table,th,td{
+    align-content: center;
+    border: 2px solid black;
+}
+.divclass{
+    text-align: center;
+    align-content: center;
+}

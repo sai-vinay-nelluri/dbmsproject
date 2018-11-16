@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}" />
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+</head>
+<body>
+    <a class="btn btn-danger btn-lg btn-block" href="#"><h1>Welcome to DBMS forms and reports lecture!</h1></a>
+    <img src="{% static "images/db.jpg" %}" alt="Database picture here!" style='height: 100%; width: 100%; object-fit: contain'>
+    <br>
+    <br>
+    <div class="divclass">
+        <a class="btn btn-primary" href="/form">Go to form</a>
+        <a class="btn btn-success" href="/report">Go to report</a>
+    </div>
+    <br>
+    <br>
+</body>
+</html>
